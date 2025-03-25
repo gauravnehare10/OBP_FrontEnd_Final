@@ -1,0 +1,159 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #931bb8;
+  padding: 5px 20px;
+  color: white;
+  font-weight: bold;
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #ffcc00;
+}
+
+/* Small Navbar */
+.small-navbar {
+  display: flex;
+  background-color: rgb(225, 228, 248);
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 65px; /* Placed right below the main navbar */
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+/* Search Box */
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 5px;
+  font-size: 14px;
+  width: 150px;
+}
+
+.search-icon {
+  color: #666;
+  font-size: 16px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.nav-icon {
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-icon:hover {
+  color: #007bff;
+}
+
+/* Hamburger Menu (for Mobile) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  background: white;
+  width: 30px;
+  height: 4px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+/* Hamburger Animation */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hamburger {
+      display: flex;
+  }
+
+  .nav-links {
+      position: absolute;
+      top: 60px;
+      left: -120%;
+      background: #003569db;
+      width: 100%;
+      flex-direction: column;
+      text-align: center;
+      padding: 15px 0;
+      gap: 15px;
+      transition: left 0.3s ease-in-out;
+  }
+
+  .nav-links.nav-active {
+      left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-box input {
+      width: 100%;
+  }
+}

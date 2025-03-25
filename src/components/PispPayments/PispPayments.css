@@ -1,0 +1,186 @@
+/* Main Layout */
+.transfer-money-container {
+    width: 90%;
+    max-width: 1000px;
+    display: grid;
+    margin: 10px auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Left Section - Bank & Beneficiary Selection */
+.paymentbox-left {
+    background: linear-gradient(135deg, #f2e1f5, #cae0fe);
+    color: rgb(0, 0, 0);
+    padding: 2rem;
+    border: 1px solid ;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.paymentbox-left h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.paymentbox-left select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.paymentbox-left select:hover {
+    background: rgba(255, 255, 255, 0.674);
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+/* Right Section - Payment Details */
+.paymentbox-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.paymentbox-right h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.transfer-money-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.transfer-money-table th, .transfer-money-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.transfer-money-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.transfer-money-input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    transform: scale(1.02);
+}
+
+/* Buttons */
+.transfer-money-btn, .cancel-btn {
+    padding: 12px 16px;
+    font-size: 1rem;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+}
+
+.transfer-money-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+}
+
+.transfer-money-btn:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+.cancel-btn {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+}
+
+.cancel-btn:hover {
+    background: #cc0000;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 964px) {
+    .transfer-money-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .paymentbox-left {
+        padding: 1.5rem;
+    }
+
+    .paymentbox-right {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .transfer-money-container {
+        padding: 1rem;
+    }
+
+    .paymentbox-left, .paymentbox-right {
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    .transfer-money-btn, .cancel-btn {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 448px) {
+    .transfer-money-container {
+        padding: 0.8rem;
+    }
+
+    .paymentbox-left h2,
+    .paymentbox-right h3 {
+        font-size: 1.5rem;
+    }
+
+    .transfer-money-input {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .transfer-money-input::placeholder {
+        font-size: 1rem;
+    }
+
+    .transfer-money-btn, .cancel-btn {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+}
+
+

@@ -1,0 +1,119 @@
+/* Container */
+.permission-form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .permission-form:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Heading */
+  .permission-form h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  /* Label */
+  .permission-form label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+    color: #444;
+  }
+  
+  /* Dropdown */
+  .permission-form select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border 0.3s;
+  }
+  
+  .permission-form select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Checkbox List */
+  .checkbox {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    padding: 8px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .checkbox:hover {
+    background: #e9ecef;
+  }
+  
+  /* Checkbox Input */
+  .checkbox input {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    accent-color: #007bff; /* Blue checkbox color */
+    transition: transform 0.2s;
+  }
+  
+  .checkbox input:checked {
+    transform: scale(1.2);
+  }
+  
+  /* Submit Button */
+  .permission-form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: #007bff;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .permission-form button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .permission-form button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .permission-form {
+      max-width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .permission-form {
+      padding: 15px;
+    }
+  
+    .permission-form h2 {
+      font-size: 1.3rem;
+    }
+  
+    .permission-form button {
+      font-size: 1rem;
+    }
+  }
+  

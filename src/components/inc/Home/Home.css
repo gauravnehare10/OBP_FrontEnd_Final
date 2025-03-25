@@ -1,0 +1,91 @@
+/* General styles */
+.home-container {
+    margin: 60px auto;
+    text-align: center;
+    color: #000000;
+    padding: 20px;
+}
+
+/* Content Box */
+.home-content {
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.home-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* Description */
+.home-description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.home-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.home-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.home-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-title {
+        font-size: 2rem;
+    }
+
+    .home-description {
+        font-size: 1rem;
+    }
+
+    .home-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-content {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .home-title {
+        font-size: 1.8rem;
+    }
+
+    .home-description {
+        font-size: 0.9rem;
+    }
+
+    .home-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .home-btn {
+        width: 100%;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,185 @@
+/* General Page Styles */
+
+  .register-container {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #d0e9ff, #b8e5fb);
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  /* register Box */
+  .register-box {
+    display: flex;
+    width: 80%;
+    margin: 30px;
+    max-width: 1000px;
+    height: auto;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .register-box:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Left Side */
+  .register-left {
+    width: 50%;
+    background: linear-gradient(purple, blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    animation: slideInLeft 1s ease-in-out;
+  }
+
+  .register-form {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .brand-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .tagline {
+    font-size: 14px;
+    max-width: 80%;
+  }
+  
+  /* Right Side */
+  .register-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    animation: slideInRight 1s ease-in-out;
+  }
+  
+  .welcome-text {
+    font-size: 28px;
+    font-weight: bold;
+    color: #008cdd;
+  }
+  
+  .register-subtext {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Input Fields */
+  .input-group {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s ease-in-out;
+  }
+  
+  .input-group input:focus {
+    border: 1px solid #008cdd;
+    outline: none;
+  }
+  
+  .forgot-password {
+    font-size: 12px;
+    color: #008cdd;
+    cursor: pointer;
+    text-align: right;
+    width: 100%;
+  }
+  
+  /* register Button */
+  .register-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  /* Register Text */
+  .register-text {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+  }
+  
+  .login-link {
+    color: #008cdd;
+    cursor: pointer;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .register-box {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .register-left {
+      width: 100%;
+      height: 250px;
+    }
+  
+    .register-right {
+      width: 100%;
+      padding: 20px;
+    }
+  }
+  
