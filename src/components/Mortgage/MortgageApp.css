@@ -1,0 +1,45 @@
+/* Mortgage Container */
+
+  .mortgage-container {
+    display: flex;
+    height: 90vh;
+    overflow: hidden;
+  }
+
+  /* Main Content */
+  .main-content {
+    margin-left: 250px;
+    padding: 20px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    width: calc(100% - 250px);
+    transition: margin-left 0.3s ease;
+  }
+  
+  .main-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+        .main-content {
+          margin-left: 200px;
+          width: calc(100% - 200px);
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .main-content {
+          margin-left: 0;
+          width: 100%;
+          padding: 20px;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .main-content {
+          padding: 15px;
+        }
+      }
+      

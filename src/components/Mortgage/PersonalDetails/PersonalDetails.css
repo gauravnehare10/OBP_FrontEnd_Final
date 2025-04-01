@@ -1,0 +1,146 @@
+.form-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    animation: fadeIn 0.5s ease-in;
+  }
+
+  .error-div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .error-message, .success-message {
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .error-message {
+    background-color: #ffdddd;
+    color: #d8000c;
+    border: 1px solid #d8000c;
+  }
+
+  .success-message {
+    background-color: #e2ffdd;
+    color: #12d800;
+    border: 1px solid #07d800;
+  }
+  
+  .form-group label {
+    flex: 1;
+    text-align: justify;
+    margin-right: 20px;
+  }
+
+  .employer-check-box {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .form-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .form-buttons-card {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .back-button, .delete-button {
+    background-color: rgb(240, 213, 213);
+    color: rgb(167, 14, 14);
+    border: solid 1.5px rgb(167, 14, 14);
+  }
+
+  .next-button, .form-submit {
+    background-color: rgb(198, 240, 198);
+    color: rgb(3, 87, 3);
+    border: solid 1.5px rgb(10, 130, 10);
+  }
+
+  .next-button:hover, .form-submit:hover, .calc-button:hover {
+    background-color: rgb(190, 231, 190);
+  }
+
+  .back-button:hover, .delete-button:hover {
+    background-color: rgb(237, 201, 201);
+  }
+
+  .address-button {
+    background-color: rgb(216, 216, 243);
+    color: blue;
+    border: solid 1.5px blue;
+    animation: fadeIn 0.5s ease-in;
+  }
+
+  .address-button:hover {
+    background-color: rgb(207, 207, 235);
+  }
+
+  .calc-button {
+    background-color: rgb(198, 240, 198);
+    color: rgb(3, 87, 3);
+    border: solid 1.5px rgb(10, 130, 10);
+    animation: fadeIn 0.5s ease-in;
+  }
+
+  .delete-email-button {
+    background-color: rgb(249, 235, 235);
+    color: red;
+    border: 1px solid;
+    padding: 5px;
+  }
+
+  .delete-email-button:hover {
+    background-color: rgb(247, 225, 225);
+  }
+
+  .dependent {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  

@@ -9,7 +9,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #d0e9ff, #b8e5fb);
     animation: fadeIn 1.5s ease-in-out;
   }
   

@@ -1,0 +1,53 @@
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .form-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+  
+  @media (max-width: 768px) {
+    .main-details-form {
+      padding: 15px;
+    }
+  
+    .form-section {
+      padding: 10px;
+    }
+  
+    .form-input {
+      font-size: 14px;
+    }
+  
+    .add-partner-btn,
+    .submit-btn {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .form-section {
+    animation: fadeIn 0.5s ease;
+  }

@@ -1,0 +1,118 @@
+.main-mortgage-container {
+    padding: 20px;
+}
+
+.aai-financials-info {
+    margin: 10px 20px;
+    text-align: center;
+    animation: slideInLeft 1s ease-in-out;
+  }
+  
+  .aai-financials-info > h2 {
+    background-color: rgb(174, 215, 250);
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .aai-financials-info > h2:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .aai-financials-details{
+    margin-top: 20px;
+    text-align: justify;
+    background-color: rgb(229, 240, 247);
+    padding: 20px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .aai-financials-details:hover {
+    transform: translateY(-10px);
+    background-color: rgb(213, 234, 243);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    animation: fadeInUp 1.5s ease-in-out;
+  }
+  
+  .navigation-buttons button {
+    padding: 8px;
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .navigation-buttons :first-child {
+    background-color: rgb(189 125 195);
+    color: white;
+    width: 140px;
+  }
+  
+  .navigation-buttons :last-child {
+    background-color: blue;
+    color: white;
+    width: 140px;
+  }
+  
+  .navigation-buttons :first-child:hover {
+    background-color: rgb(123, 116, 123);
+    transform: scale(1.1);
+  }
+  
+  .navigation-buttons :last-child:hover {
+    background-color: rgb(87, 178, 235);
+    transform: scale(1.1);
+  }
+
+  .add-mortgage-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media only screen and (max-width: 828px) {
+    .navigation-buttons {
+      gap: 5px;
+    }
+  
+    .navigation-buttons :first-child {
+      width: 100%;
+    }
+  
+    .navigation-buttons :last-child {
+      width: 100%;
+    }
+  }
+
+/* Keyframes for animations */
+  
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }

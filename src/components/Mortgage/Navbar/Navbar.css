@@ -1,0 +1,94 @@
+/* LeftFixedNavbar.css */
+  
+  /* Fixed Navbar (Left Navbar) */
+  .mortgage-navbar {
+    overflow: auto;
+    width: 250px;
+    background-color: #e7e7e7;
+    color: rgb(0, 0, 0);
+    position: fixed;
+    left: 0;
+    top: 120px;
+    bottom: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    transition: left 0.3s ease;
+  }
+  
+  .mort-nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .mort-nav-links li {
+    margin: 0;
+  }
+  
+  .mort-nav-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .mort-nav-links a:hover {
+    color: #60a5fa;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .mort-nav-links .active-link {
+    color: #003cff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .mortgage-navbar {
+      width: 200px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .mortgage-navbar {
+      left: -250px;
+      width: 250px;
+    }
+  
+    .mortgage-navbar.open {
+      left: 0;
+    }
+
+    /* Toggle Button */
+  .nav-toggle {
+    display: unset;
+    position: fixed;
+    left: -5px;
+    top: 60px;
+    background-color: #60a5fa;
+    color: white;
+    border: none;
+    padding: 10px 4px;
+    cursor: pointer;
+    z-index: 1050;
+    border-radius: 5px;
+  }
+  }
+  
+  @media (max-width: 480px) {
+    .mort-nav-logo {
+      font-size: 18px;
+    }
+  
+    .mort-nav-links a {
+      font-size: 14px;
+    }
+  }
+  
