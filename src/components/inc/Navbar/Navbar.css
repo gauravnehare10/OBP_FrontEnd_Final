@@ -128,6 +128,48 @@
   transform: translateY(-8px) rotate(-45deg);
 }
 
+/* Existing styles... */
+
+.user-icon-container, .settings-icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 4px;
+  padding: 10px 0;
+}
+
+.dropdown-menu a, .dropdown-menu button {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover, .dropdown-menu button:hover {
+  background-color: #f1f1f1;
+}
+
+/* Add some spacing between icon and text */
+.dropdown-menu a svg {
+  margin-right: 8px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hamburger {

@@ -1,14 +1,16 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { FaSearch, FaCommentDots, FaBell, FaCog, FaUserCircle } from "react-icons/fa";
+import { FaSearch, FaCommentDots, FaBell, FaCog, FaUserCircle, FaUserPlus } from "react-icons/fa";
 import "./Navbar.css";
 import useAuthStore from "../../../utils/authStore";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [showDropdown, setShowDropdown] = useState(false);
-  const dropdownRef = useRef(null);
+  const [showUserDropdown, setShowUserDropdown] = useState(false);
+  const [showSettingsDropdown, setShowSettingsDropdown] = useState(false);
+  const userDropdownRef = useRef(null);
+  const settingsDropdownRef = useRef(null);
   
   const { isAuthenticated, logout } = useAuthStore();
 
@@ -16,11 +18,14 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  // Close dropdown when clicking outside
+  // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setShowDropdown(false);
+      if (userDropdownRef.current && !userDropdownRef.current.contains(event.target)) {
+        setShowUserDropdown(false);
+      }
+      if (settingsDropdownRef.current && !settingsDropdownRef.current.contains(event.target)) {
+        setShowSettingsDropdown(false);
       }
     };
 
@@ -42,7 +47,7 @@ const Navbar = () => {
     <div>
       {/* Main Navbar */}
       <nav className="navbar">
-        <div className="logo">AAI Financials</div>
+        <div className="logo">AAI Fin</div>
 
         {/* Hamburger Icon */}
         <div className={`hamburger ${isOpen ? "open" : ""}`} onClick={toggleMenu}>
@@ -98,17 +103,34 @@ const Navbar = () => {
           </div>
           <FaCommentDots className="nav-icon" />
           <FaBell className="nav-icon" />
-          <FaCog className="nav-icon" />
-          <div className="user-icon-container" ref={dropdownRef}>
+          
+          {/* Settings Dropdown */}
+          <div className="settings-icon-container" ref={settingsDropdownRef}>
+            <FaCog 
+              className="nav-icon" 
+              onClick={() => setShowSettingsDropdown(!showSettingsDropdown)} 
+            />
+            {showSettingsDropdown && (
+              <div className="dropdown-menu">
+                <Link to="/add-bank-account" onClick={() => setShowSettingsDropdown(false)}>
+                  <FaUserPlus style={{marginRight: "8px"}} />
+                  Add Account
+                </Link>
+              </div>
+            )}
+          </div>
+          
+          {/* User Dropdown */}
+          <div className="user-icon-container" ref={userDropdownRef}>
             <FaUserCircle 
               className="nav-icon" 
-              onClick={() => setShowDropdown(!showDropdown)} 
+              onClick={() => setShowUserDropdown(!showUserDropdown)} 
             />
-            {showDropdown && (
+            {showUserDropdown && (
               <div className="dropdown-menu">
-                <Link to="/profile" onClick={() => setShowDropdown(false)}>Profile</Link>
+                <Link to="/profile" onClick={() => setShowUserDropdown(false)}>Profile</Link>
                 <button onClick={() => {
-                  setShowDropdown(false);
+                  setShowUserDropdown(false);
                   logout();
                 }}>Logout</button>
               </div>

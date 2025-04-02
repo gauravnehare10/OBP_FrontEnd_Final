@@ -45,11 +45,6 @@ const BankAccounts = ({ accounts }) => {
           </>
         )}
       </div>
-      <div className="auth-btn">
-        <button className="bank-auth-btn" onClick={() => navigate("/authorize")}>
-          Add { accounts.length > 0 ? "another" : "your"} bank account
-        </button>
-      </div>
       <span className="scroll-btn left" onClick={scrollLeft}>
         ‹
       </span>

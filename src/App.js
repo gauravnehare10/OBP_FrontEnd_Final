@@ -23,7 +23,7 @@ function App() {
         <Route path='/' element={<Dashboard />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/register' element={<Register />}></Route>
-        <Route path='/authorize' element={
+        <Route path='/add-bank-account' element={
           <PrivateRoute>
             <BankAuth />
           </PrivateRoute>
