@@ -114,7 +114,7 @@ const Navbar = () => {
               <div className="dropdown-menu">
                 <Link to="/add-bank-account" onClick={() => setShowSettingsDropdown(false)}>
                   <FaUserPlus style={{marginRight: "8px"}} />
-                  Add Account
+                  Add Bank Account
                 </Link>
               </div>
             )}

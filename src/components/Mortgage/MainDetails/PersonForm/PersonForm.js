@@ -1,6 +1,18 @@
 const PersonForm = ({ person, onChange, onDelete, title, showDeleteButton }) => {
     return (
       <div className="form-section">
+        {/* Delete Button for Partners */}
+        {showDeleteButton && (
+          <div className="form-group">
+            <button
+              type="button"
+              className="delete-button"
+              onClick={onDelete}
+            >
+              Delete Partner
+            </button>
+          </div>
+        )}
         <h3>{title}</h3>
         <div className="form-group-container">
           <div className="form-group">
@@ -185,18 +197,6 @@ const PersonForm = ({ person, onChange, onDelete, title, showDeleteButton }) => 
           </div>
         </div>
   
-        {/* Delete Button for Partners */}
-        {showDeleteButton && (
-          <div className="form-group">
-            <button
-              type="button"
-              className="delete-button"
-              onClick={onDelete}
-            >
-              Delete Partner
-            </button>
-          </div>
-        )}
       </div>
     );
   };

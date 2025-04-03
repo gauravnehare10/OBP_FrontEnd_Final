@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './Navbar/Navbar';
 import "./MortgageApp.css";
+import "./FormCss.css";
 import PersonalDetails from './PersonalDetails/PersonalDetails';
 import Residential from './Residential/Residential';
 import OccupationDetails from './OccupationDetails/OccupationDetails';

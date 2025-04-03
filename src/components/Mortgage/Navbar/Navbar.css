@@ -70,8 +70,8 @@
   .nav-toggle {
     display: unset;
     position: fixed;
-    left: -5px;
-    top: 60px;
+    left: -4px;
+    top: 120px;
     background-color: #60a5fa;
     color: white;
     border: none;

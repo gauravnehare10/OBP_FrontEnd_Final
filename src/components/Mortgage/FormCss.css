@@ -1,5 +1,5 @@
 .form-container {
-    max-width: 1000px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 20px;
     background-color: #f9f9f9;
@@ -51,13 +51,14 @@
     margin: 10px;
   }
   
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
+  .form-group > input,
+  .form-group > select,
+  .form-group > textarea {
     flex: 1;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    width: 100%;
   }
 
   .form-buttons {
@@ -144,3 +145,13 @@
     to { opacity: 1; }
   }
   
+
+  @media (max-width: 480px) {
+    .form-group label {
+      margin-right: 10px;
+    }
+
+    button {
+      padding: 10px;
+    }
+  }
