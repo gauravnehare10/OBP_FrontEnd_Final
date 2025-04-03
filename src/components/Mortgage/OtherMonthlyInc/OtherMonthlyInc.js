@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../PersonalDetails/PersonalDetails.css';
 import useFormStore from '../store';
 import { validateOtherMonthlyIncome } from './OtherMonthlyIncForm/Validations';
 

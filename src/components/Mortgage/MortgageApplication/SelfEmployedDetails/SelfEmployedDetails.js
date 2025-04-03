@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import "../../PersonalDetails/PersonalDetails.css";
 import { useNavigate } from 'react-router-dom';
 import useFormStore from '../../store';
 import SelfEmployedFields from './SelfEmployedForm/SelfEmployedForm';

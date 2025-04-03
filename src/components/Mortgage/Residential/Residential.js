@@ -4,7 +4,6 @@ import axios from 'axios';
 import useFormStore from '../store';
 import FormButtons from '../inc/FormButtons/FormButton';
 import ResidenceForm from './ResidentialForm/ResidentialForm';
-import '../PersonalDetails/PersonalDetails.css';
 import { validateResidentialDetails } from './ResidentialForm/Validations';
 
 const Residential = () => {

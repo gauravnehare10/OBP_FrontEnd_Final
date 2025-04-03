@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../PersonalDetails/PersonalDetails.css';
+import '../FormCss.css';
 import useFormStore from '../store';
 import { validateMonthlyExpenditure } from './MonthlyExpendForm/Validations';
 

@@ -203,7 +203,7 @@ const MainDetails = () => {
         }
       }, 100);
       return false;
-    }
+    } 
     
     return true;
   };

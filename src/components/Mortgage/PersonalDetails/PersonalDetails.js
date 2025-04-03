@@ -4,7 +4,6 @@ import useFormStore from '../store';
 import PersonalDetailsForm from './PersonalDetailsForm/PersonalDetailsForm';
 import DependentForm from './DependentForm/DependentForm';
 import FormButtons from '../inc/FormButtons/FormButton';
-import './PersonalDetails.css';
 import { validatePersonalDetails } from './PersonalDetailsForm/Validations';
 
 const PersonalDetails = () => {

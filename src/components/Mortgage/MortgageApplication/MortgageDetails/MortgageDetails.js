@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react';
-import '../../PersonalDetails/PersonalDetails.css';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import useFormStore from '../../store';
