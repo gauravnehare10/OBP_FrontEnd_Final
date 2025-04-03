@@ -132,6 +132,8 @@ const ContactForm = ({ contactDetails, onChange, onAddEmail, onDeleteEmail }) =>
           <option value="work">Work</option>
           <option value="other">Other</option>
         </select>
+      </div>
+      <div className='form-group'>
         <button
           type="button"
           onClick={onAddEmail}

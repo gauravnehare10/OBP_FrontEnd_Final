@@ -290,7 +290,11 @@ const MainDetails = () => {
           />
         </div>
       ))}
-  
+      { error && (
+        <div className="error-message">
+          {error}
+        </div>
+      )}
       <div className="form-buttons">
         <div className="form-buttons-card">
           <button type="button" onClick={addNewPartner} className="calc-button">
