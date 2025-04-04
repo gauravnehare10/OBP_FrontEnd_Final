@@ -36,7 +36,7 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    document.body.style.paddingTop = isAuthenticated ? "120px" : "60px";
+    document.body.style.paddingTop = isAuthenticated ? "100px" : "60px";
 
     return () => {
       document.body.style.paddingTop = "60px";
@@ -101,9 +101,13 @@ const Navbar = () => {
             />
             <FaSearch className="search-icon" />
           </div>
-          <FaCommentDots className="nav-icon" />
-          <FaBell className="nav-icon" />
-          
+          <div className="settings-icon-container">
+            <FaCommentDots className="nav-icon" />
+          </div>
+
+          <div className="settings-icon-container">
+            <FaBell className="nav-icon" />
+          </div>
           {/* Settings Dropdown */}
           <div className="settings-icon-container" ref={settingsDropdownRef}>
             <FaCog 

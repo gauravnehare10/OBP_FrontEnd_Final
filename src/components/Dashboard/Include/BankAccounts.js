@@ -20,7 +20,7 @@ const BankAccounts = ({ accounts }) => {
   return (
     <div className="bank-accounts-details">
       <div>
-          <h1 align="center">Accounts</h1>
+          <h2 align="center">Accounts</h2>
       </div>
       <div className="bank-details" ref={bankRef}>
         {accounts.length > 0 ? (

@@ -33,7 +33,6 @@ export default function MortgageDataApp() {
       <Navbar />
       <div className="main-content">
         <Routes>
-          {/* Relative Routing for Nested Paths */}
           <Route path='/' element={<Navigate to="/mortgage/add-details/main-details" />} />
           <Route path='/main-details' element={<MainDetails />} />
           <Route path='/personal-details' element={<PersonalDetails />} />

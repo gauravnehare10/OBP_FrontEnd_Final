@@ -59,7 +59,7 @@
   gap: 20px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   position: fixed;
-  top: 65px; /* Placed right below the main navbar */
+  top: 65px;
   left: 0;
   width: 100%;
   z-index: 999;
@@ -171,9 +171,24 @@
 }
 
 /* Responsive Design */
+
+@media (max-width: 1248px) {
+  .navbar {
+    font-size: 10px
+  }
+
+  .small-navbar {
+    top: 53px;
+  }
+}
+
 @media (max-width: 768px) {
   .hamburger {
       display: flex;
+  }
+
+  .small-navbar {
+    top: 45px;
   }
 
   .nav-links {
