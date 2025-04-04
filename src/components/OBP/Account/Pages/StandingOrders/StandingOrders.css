@@ -1,0 +1,138 @@
+/* StandingOrders.css */
+
+.standing-order-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .heading-main {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .error-message {
+    color: #e74c3c;
+    background-color: #fadbd8;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: 500;
+  }
+  
+  .standing-orders-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+    width: 100%;
+  }
+  
+  .standing-order-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .standing-order-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .standing-order-card h3 {
+    color: #3498db;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-bottom: 1px solid #ecf0f1;
+    padding-bottom: 10px;
+  }
+  
+  .standing-order-card p {
+    margin: 10px 0;
+    color: #34495e;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .standing-order-card strong {
+    color: #2c3e50;
+    font-weight: 600;
+  }
+  
+  .payment-amounts,
+  .creditor-account {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed #ecf0f1;
+  }
+  
+  .creditor-account h4 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #3498db;
+    font-size: 1.1rem;
+  }
+  
+  /* No data message */
+  .standing-order-container > p {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    margin: 30px 0;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 900px) {
+    .standing-orders-list {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .standing-order-container {
+      padding: 15px;
+    }
+    
+    .heading-main {
+      font-size: 1.7rem;
+    }
+    
+    .standing-order-card {
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .standing-orders-list {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .heading-main {
+      font-size: 1.5rem;
+    }
+    
+    .standing-order-card {
+      padding: 15px;
+    }
+    
+    .standing-order-card h3 {
+      font-size: 1.2rem;
+    }
+    
+    .standing-order-card p {
+      font-size: 0.9rem;
+    }
+  }

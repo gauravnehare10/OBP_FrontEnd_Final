@@ -206,6 +206,13 @@
     scroll-snap-type: x mandatory;
     height: auto;
     gap: 12px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
   
   .bank-card {

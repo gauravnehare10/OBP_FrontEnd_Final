@@ -27,7 +27,7 @@ const BankAccounts = ({ accounts }) => {
           accounts.map((account, index) => (
             <div
               key={account.AccountId}
-              onClick={() => navigate(`/${account.bank}/account/?accountId=${account.AccountId}`)}
+              onClick={() => navigate(`/${account.bank}/account/${account.AccountId}`)}
               style={{ cursor: "pointer" }}
               className="bank-card"
             >

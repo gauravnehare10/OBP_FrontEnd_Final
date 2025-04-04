@@ -1,0 +1,154 @@
+/* ScheduledPayments.css */
+
+.scheduled-payments-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .heading-main {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .error-message {
+    color: #e74c3c;
+    background-color: #fadbd8;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin: 1.5rem 0;
+    font-weight: 500;
+  }
+  
+  .scheduled-payments-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+  }
+  
+  .scheduled-payment-card {
+    background: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .scheduled-payment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+  
+  .scheduled-payment-card h3 {
+    color: #3498db;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #ecf0f1;
+  }
+  
+  .scheduled-payment-card p {
+    margin: 0.75rem 0;
+    color: #34495e;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .scheduled-payment-card strong {
+    color: #2c3e50;
+    font-weight: 600;
+    min-width: 140px;
+    display: inline-block;
+  }
+  
+  /* No data message */
+  .scheduled-payments-container > p {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .scheduled-payments-container {
+      padding: 1.5rem;
+    }
+    
+    .scheduled-payments-list {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .heading-main {
+      font-size: 1.75rem;
+    }
+    
+    .scheduled-payment-card {
+      padding: 1.25rem;
+    }
+    
+    .scheduled-payment-card strong {
+      min-width: 120px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .scheduled-payments-list {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+    
+    .scheduled-payments-container {
+      padding: 1.25rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .heading-main {
+      font-size: 1.5rem;
+    }
+    
+    .scheduled-payment-card {
+      padding: 1rem;
+    }
+    
+    .scheduled-payment-card h3 {
+      font-size: 1.15rem;
+    }
+    
+    .scheduled-payment-card p {
+      font-size: 0.9rem;
+    }
+    
+    .scheduled-payment-card strong {
+      min-width: 110px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .scheduled-payment-card strong {
+      display: block;
+      margin-bottom: 0.25rem;
+      min-width: auto;
+    }
+    
+    .scheduled-payments-container {
+      padding: 1rem;
+    }
+  }

@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./AllTransactions.css";
-import { useNavigate } from "react-router-dom";
-import useAuthStore from "../../../utils/authStore";
+import { Link, useNavigate } from "react-router-dom";
+import useAuthStore from "../../../../../utils/authStore";
 
-const AllTransactions = () => {
+const Transactions = ({bank, accountId}) => {
   const [transactions, setTransactions] = useState([]);
   const { getAccessToken } = useAuthStore();
   const navigate = useNavigate();
@@ -12,7 +11,7 @@ const AllTransactions = () => {
   useEffect(() => {
     const access_token = getAccessToken();
     axios
-      .get(`http://localhost:8000/transactions`,
+      .get(`http://localhost:8000/${bank}/accounts/${accountId}/transactions`,
         {
             headers: {
                 Authorization: `Bearer ${access_token}`,
@@ -28,7 +27,7 @@ const AllTransactions = () => {
       .catch((error) => {
         console.error("Error fetching transactions:", error);
       });
-  }, [getAccessToken]);
+  }, [getAccessToken, accountId, bank]);
 
   return (
     <div className="transactions-container">
@@ -43,6 +42,7 @@ const AllTransactions = () => {
             <th>Balance</th>
             <th>Status</th>
             <th>Bank</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -54,6 +54,14 @@ const AllTransactions = () => {
               <td>{transaction.Balance.Amount.Amount}</td>
               <td>{transaction.Status}</td>
               <td>{transaction.bank}</td>
+              <td>
+                <Link
+                  to={`/${bank}/accounts/${accountId}/transactions/${transaction.TransactionId}`}
+                  className="view-details-button"
+                >
+                  View Details
+                </Link>
+              </td>
             </tr>
           ))}
         </tbody>
@@ -62,4 +70,4 @@ const AllTransactions = () => {
   );
 };
 
-export default AllTransactions;
+export default Transactions;

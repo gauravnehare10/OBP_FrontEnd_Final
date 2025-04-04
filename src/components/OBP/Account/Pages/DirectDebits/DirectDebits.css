@@ -1,0 +1,122 @@
+/* DirectDebits.css */
+
+.direct-debits-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .heading-main {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .error-message {
+    color: #e74c3c;
+    background-color: #fadbd8;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: 500;
+  }
+  
+  .direct-debits-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .direct-debit-card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .direct-debit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .direct-debit-card h3 {
+    color: #3498db;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  
+  .direct-debit-card p {
+    margin: 8px 0;
+    color: #34495e;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .direct-debit-card strong {
+    color: #2c3e50;
+    font-weight: 600;
+  }
+  
+  .previous-payment {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #ecf0f1;
+  }
+  
+  .previous-payment h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #3498db;
+    font-size: 1.1rem;
+  }
+  
+  /* No data message */
+  .direct-debits-container > p {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    margin: 30px 0;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .direct-debits-container {
+      padding: 15px;
+    }
+    
+    .heading-main {
+      font-size: 1.7rem;
+    }
+    
+    .direct-debits-list {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .heading-main {
+      font-size: 1.5rem;
+    }
+    
+    .direct-debit-card {
+      padding: 15px;
+    }
+    
+    .direct-debit-card h3 {
+      font-size: 1.2rem;
+    }
+    
+    .direct-debit-card p {
+      font-size: 0.9rem;
+    }
+  }
