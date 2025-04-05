@@ -1,0 +1,133 @@
+/* Transaction.css */
+
+.transaction-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .transaction-header {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .transaction-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .transaction-section {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .transaction-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  
+  .transaction-section h2 {
+    color: #3498db;
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ecf0f1;
+  }
+  
+  .transaction-row {
+    display: flex;
+    margin-bottom: 0.8rem;
+    flex-wrap: wrap;
+  }
+  
+  .transaction-label {
+    font-weight: 600;
+    color: #2c3e50;
+    min-width: 180px;
+    margin-right: 1rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .transaction-value {
+    color: #34495e;
+    flex: 1;
+    word-break: break-word;
+  }
+  
+  .transaction-loading,
+  .transaction-error,
+  .transaction-not-found {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.1rem;
+    color: #7f8c8d;
+  }
+  
+  .transaction-error {
+    color: #e74c3c;
+    background-color: #fadbd8;
+    border-radius: 5px;
+    padding: 1rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .transaction-container {
+      padding: 1.5rem;
+    }
+    
+    .transaction-header {
+      font-size: 1.7rem;
+    }
+    
+    .transaction-card {
+      padding: 1.5rem;
+    }
+    
+    .transaction-label {
+      min-width: 150px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .transaction-container {
+      padding: 1rem;
+    }
+    
+    .transaction-header {
+      font-size: 1.5rem;
+    }
+    
+    .transaction-card {
+      padding: 1.2rem;
+    }
+    
+    .transaction-section h2 {
+      font-size: 1.2rem;
+    }
+    
+    .transaction-label {
+      min-width: 100%;
+      margin-bottom: 0.2rem;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .transaction-card {
+      padding: 1rem;
+    }
+    
+    .transaction-label,
+    .transaction-value {
+      font-size: 0.9rem;
+    }
+  }

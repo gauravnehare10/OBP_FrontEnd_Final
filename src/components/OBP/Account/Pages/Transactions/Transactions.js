@@ -56,7 +56,7 @@ const Transactions = ({bank, accountId}) => {
               <td>{transaction.bank}</td>
               <td>
                 <Link
-                  to={`/${bank}/accounts/${accountId}/transactions/${transaction.TransactionId}`}
+                  to={`/${bank}/account/${accountId}/transactions/${transaction.TransactionId}`}
                   className="view-details-button"
                 >
                   View Details

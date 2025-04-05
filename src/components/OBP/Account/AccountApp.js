@@ -3,6 +3,7 @@ import { Routes, Route, Navigate, useParams } from 'react-router-dom';
 import AccountNavbar from '../Account/AccountNavbar/AccountNavbar';
 import Account from './Pages/Overview/Account';
 import Transactions from './Pages/Transactions/Transactions';
+import Transaction from './Pages/Transaction/Transaction';
 import Beneficiaries from './Pages/Beneficiaries/Beneficiaries';
 import Balances from './Pages/Balances/Balances';
 import DirectDebits from './Pages/DirectDebits/DirectDebits';
@@ -23,6 +24,7 @@ export default function AccountApp() {
             <Route path='/' element={<Navigate to={`/${bank}/account/${accountId}/overview`} />} />
             <Route path='/overview' element={<Account bank={bank} accountId={accountId} />} />
             <Route path='/transactions' element={<Transactions bank={bank} accountId={accountId} />} />
+            <Route path='/transactions/:transactionId' element={<Transaction bank={bank} accountId={accountId} />} />
             <Route path='/beneficiaries' element={<Beneficiaries bank={bank} accountId={accountId} />} />
             <Route path='/balances' element={<Balances bank={bank} accountId={accountId} />} />
             <Route path='/direct-debits' element={<DirectDebits bank={bank} accountId={accountId} />} />

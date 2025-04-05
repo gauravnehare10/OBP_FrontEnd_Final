@@ -9,8 +9,6 @@ import PispPayments from './components/OBP/PispPayments/PispPayments';
 import Callback from './components/OBP/Callback/Callback';
 import BankAuth from './components/OBP/BankAuth/BankAuth';
 import PaymentStatus from './components/OBP/PaymentStatus/PaymentStatus';
-import Accounts from './components/OBP/Account/Pages/Overview/Account';
-import Transactions from './components/OBP/Transactions/Transactions';
 import PrivateRoute from './utils/PrivateRoute';
 import MortgageDataApp from  './components/Mortgage/MortgageApp';
 import Mortgage from './components/MortgageComp/Mortgage';
@@ -52,11 +50,6 @@ function App() {
         <Route path='/:bank/account/:accountId/*' element={
           <PrivateRoute>
             <AccountApp />
-          </PrivateRoute>
-        }></Route>
-        <Route path='/:bank/transaction/:accountId' element={
-          <PrivateRoute>
-            <Transactions />
           </PrivateRoute>
         }></Route>
 
