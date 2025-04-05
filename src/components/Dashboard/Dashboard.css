@@ -188,9 +188,7 @@
   .bank-details {
     padding: 20px;
   }
-}
 
-@media (max-width: 1248px){
   .grid-container {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
@@ -206,24 +204,30 @@
   }
   
   .bank-details {
+    display: flex;
     flex-direction: row;
     overflow-x: auto;
-    padding: 16px;
     scroll-snap-type: x mandatory;
-    height: auto;
+    padding: 16px;
     gap: 12px;
     &::-webkit-scrollbar {
       display: none;
     }
-  }
-
-  .grid-container {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    
+    /* Special case for single account */
+    &:has(> .bank-card:only-child) {
+      justify-content: center;
+    }
   }
   
   .bank-card {
     min-width: 280px;
     scroll-snap-align: start;
+    
+    /* Single card takes more width */
+    &:only-child {
+      min-width: 400px;
+    }
   }
   
   .auth-btn {

@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import useAuthStore from "../../../../../utils/authStore";
 import "./Beneficiaries.css";
+import { useNavigate } from 'react-router-dom';
 
 export default function Beneficiaries({ bank, accountId }) {
   const [beneficiaries, setBeneficiaries] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const { getAccessToken } = useAuthStore();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchBeneficiaries = async () => {
@@ -38,7 +40,8 @@ export default function Beneficiaries({ bank, accountId }) {
 
   return (
     <div className="beneficiaries-container">
-      <h2>Beneficiaries</h2>
+      <button className="back-btn" onClick={ () => navigate(-1) }>Go Back</button>
+      <h2 align="center">Beneficiaries</h2>
       
       <div className="table-responsive">
         <table className="beneficiaries-table">

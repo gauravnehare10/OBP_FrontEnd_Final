@@ -42,6 +42,7 @@ const BankAccounts = ({ accounts }) => {
         ) : (
           <>
             <p>No authorized bank accounts found.</p>
+            <button className="bank-auth-btn" onClick={()=> navigate('/add-bank-account')}>Add your account</button>
           </>
         )}
       </div>

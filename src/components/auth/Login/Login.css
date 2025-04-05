@@ -231,3 +231,16 @@
     }
   }
   
+  @media screen and (max-width: 480px) {
+    .login-form {
+      padding: 10px;
+    }
+
+    .input-group {
+      margin-bottom: 10px;
+    }
+    
+    .login-left, .login-right {
+      padding: 10px;
+    }
+  }

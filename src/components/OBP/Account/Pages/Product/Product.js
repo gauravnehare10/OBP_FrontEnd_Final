@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Product.css';
 import useAuthStore from '../../../../../utils/authStore';
+import { useNavigate } from 'react-router-dom';
 
 export default function Product({bank, accountId}) {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(null);
   const { getAccessToken } = useAuthStore();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const access_token = getAccessToken();
@@ -28,7 +30,8 @@ export default function Product({bank, accountId}) {
 
   return (
     <div className="product-container">
-      <h1 className="heading-main">Products</h1>
+      <button className="back-btn" onClick={ () => navigate(-1) }>Go Back</button>
+      <h2 className="heading-main">Products</h2>
       {error ? (
         <p className="error-message">{error}</p>
       ) : products.length > 0 ? (

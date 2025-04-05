@@ -182,3 +182,16 @@
     }
   }
   
+  @media screen and (max-width: 480px) {
+    .register-form {
+      padding: 10px;
+    }
+
+    .input-group {
+      margin-bottom: 10px;
+    }
+    
+    .register-left, .register-right {
+      padding: 10px;
+    }
+  }

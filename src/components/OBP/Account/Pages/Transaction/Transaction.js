@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import useAuthStore from '../../../../../utils/authStore';
 import axios from 'axios';
 import './Transaction.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Transaction({bank, accountId}) {
     const { transactionId } = useParams();
@@ -10,6 +11,7 @@ export default function Transaction({bank, accountId}) {
     const [transaction, setTransaction] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const navigate = useNavigate();
     
     useEffect(() => {
         const access_token = getAccessToken();
@@ -47,7 +49,8 @@ export default function Transaction({bank, accountId}) {
 
   return (
     <div className="transaction-container">
-      <h1 className="transaction-header">Transaction Details</h1>
+      <button className="back-btn" onClick={ () => navigate(-1) }>Go Back</button>
+      <h2 className="transaction-header">Transaction Details</h2>
       
       <div className="transaction-card">
         <div className="transaction-section">

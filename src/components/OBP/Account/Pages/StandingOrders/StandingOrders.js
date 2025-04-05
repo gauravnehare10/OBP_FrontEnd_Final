@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './StandingOrders.css';
 import useAuthStore from '../../../../../utils/authStore';
+import { useNavigate } from 'react-router-dom';
 
 export default function StandingOrders({bank, accountId}) {
   const [standingOrders, setStandingOrders] = useState([]);
   const [error, setError] = useState(null);
   const { getAccessToken } = useAuthStore();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const access_token = getAccessToken();
@@ -28,7 +30,8 @@ export default function StandingOrders({bank, accountId}) {
 
   return (
     <div className="standing-order-container">
-      <h1 className="heading-main">Standing Orders</h1>
+      <button className="back-btn" onClick={ () => navigate(-1) }>Go Back</button>
+      <h2 className="heading-main">Standing Orders</h2>
       {error ? (
         <p className="error-message">{error}</p>
       ) : standingOrders.length > 0 ? (

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import useAuthStore from "../../../../../utils/authStore";
 import "./Balances.css";
+import { useNavigate } from 'react-router-dom';
 
 export default function Balances({ bank, accountId }) {
   const [account, setAccount] = useState(null);
@@ -9,6 +10,7 @@ export default function Balances({ bank, accountId }) {
   const [error, setError] = useState(null);
   const [showBalances, setShowBalances] = useState(false);
   const { getAccessToken } = useAuthStore();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchAccount = async () => {
@@ -51,7 +53,8 @@ export default function Balances({ bank, accountId }) {
 
   return (
     <div className="account-container">
-      <h2>Balance Information</h2>
+      <button className="back-btn" onClick={ () => navigate(-1) }>Go Back</button>
+      <h2 align="center">Balance Information</h2>
       
       <div className="account-card">
         <div className="account-header">

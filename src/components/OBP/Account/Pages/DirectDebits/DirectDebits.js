@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './DirectDebits.css';
 import useAuthStore from '../../../../../utils/authStore';
+import { useNavigate } from 'react-router-dom';
 
 export default function DirectDebits({bank, accountId}) {
     const [directDebits, setDirectDebits] = useState([]);
     const [error, setError] = useState(null);
     const { getAccessToken } = useAuthStore();
+    const navigate = useNavigate();
   
     useEffect(() => {
         const access_token = getAccessToken();
@@ -28,6 +30,7 @@ export default function DirectDebits({bank, accountId}) {
   
     return (
       <div className="direct-debits-container">
+        <button className="back-btn" onClick={ () => navigate(-1) }>Go Back</button>
         <h2 className="heading-main">Direct Debits</h2>
         {error ? (
           <p className="error-message">{error}</p>

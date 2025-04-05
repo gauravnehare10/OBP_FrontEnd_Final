@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './ScheduledPayments.css';
 import useAuthStore from '../../../../../utils/authStore';
+import { useNavigate } from 'react-router-dom';
 
 export default function ScheduledPayments({bank, accountId}) {
   const [scheduledPayments, setScheduledPayments] = useState([]);
   const [error, setError] = useState(null);
   const { getAccessToken } = useAuthStore();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const access_token = getAccessToken();
@@ -29,7 +31,8 @@ export default function ScheduledPayments({bank, accountId}) {
 
   return (
     <div className="scheduled-payments-container">
-      <h1 className="heading-main">Scheduled Payments</h1>
+      <button className="back-btn" onClick={ () => navigate(-1) }>Go Back</button>
+      <h2 className="heading-main">Scheduled Payments</h2>
       {error ? (
         <p className="error-message">{error}</p>
       ) : scheduledPayments.length > 0 ? (
